@@ -35,3 +35,15 @@ if __name__ == '__main__':
             self.assertEqual(calculator.subtract(b, a), c)
 if __name__ == '__main__':
     unittest.main()
+
+    def test_multiply_method_calculator(self):
+        calculator = Calculator()
+        self.assertEqual(calculator.multiply(2, 2), 4)
+        data = CsvReader('src/Unit Test Subtraction.csv').data
+        for row in data:
+            a = int(row['Value 1'])
+            b = int(row['Value 2'])
+            c = int(row['Result'])
+            self.assertEqual(calculator.multiply(b, a), c)
+if __name__ == '__main__':
+    unittest.main()
