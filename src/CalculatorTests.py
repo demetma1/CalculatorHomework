@@ -22,7 +22,7 @@ class MyTestCase(unittest.TestCase):
             c = int(row['Result'])
             self.assertEqual(calculator.add(a, b), c)
 if __name__ == '__main__':
-    unittest.main()
+        unittest.main()
 
     def test_subtract_method_calculator(self):
         calculator = Calculator()
@@ -36,7 +36,7 @@ if __name__ == '__main__':
 if __name__ == '__main__':
     unittest.main()
 
- def test_multiply_method_calculator(self):
+    def test_multiply_method_calculator(self):
         calculator = Calculator()
         self.assertEqual(calculator.multiply(2, 2), 4)
         data = CsvReader('src/Unit Test Multiplication.csv').data
@@ -46,7 +46,7 @@ if __name__ == '__main__':
             c = int(row['Result'])
             self.assertEqual(calculator.multiply(b, a), c)
 if __name__ == '__main__':
-    unittest.main()
+        unittest.main()
 
     def test_divide_method_calculator(self):
         calculator = Calculator()
@@ -57,5 +57,18 @@ if __name__ == '__main__':
             b = int(row['Value 2'])
             c = int(row['Result'])
             self.assertEqual(calculator.divide(b, a), c)
+ if __name__ == '__main__':
+        unittest.main()
+
+    def test_square_method_calculator(self):
+        calculator = Calculator()
+        self.assertEqual(calculator.square(2), 4)
+        data = CsvReader('src/Unit Test Square.csv').data
+        for row in data:
+            a = int(row['Value 1'])
+            b = int(row['Result'])
+            self.assertEqual(calculator.square(a), b)
+
 if __name__ == '__main__':
     unittest.main()
+
