@@ -36,14 +36,26 @@ if __name__ == '__main__':
 if __name__ == '__main__':
     unittest.main()
 
-    def test_multiply_method_calculator(self):
+ def test_multiply_method_calculator(self):
         calculator = Calculator()
         self.assertEqual(calculator.multiply(2, 2), 4)
-        data = CsvReader('src/Unit Test Subtraction.csv').data
+        data = CsvReader('src/Unit Test Multiplication.csv').data
         for row in data:
             a = int(row['Value 1'])
             b = int(row['Value 2'])
             c = int(row['Result'])
             self.assertEqual(calculator.multiply(b, a), c)
+if __name__ == '__main__':
+    unittest.main()
+
+    def test_divide_method_calculator(self):
+        calculator = Calculator()
+        self.assertEqual(calculator.divide(2, 4), 2)
+        data = CsvReader('src/Unit Test Division.csv').data
+        for row in data:
+            a = int(row['Value 1'])
+            b = int(row['Value 2'])
+            c = int(row['Result'])
+            self.assertEqual(calculator.divide(b, a), c)
 if __name__ == '__main__':
     unittest.main()
